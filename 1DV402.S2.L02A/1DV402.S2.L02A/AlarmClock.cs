@@ -81,5 +81,36 @@ namespace _1DV402.S2.L02A
             AlarmMinute = alarmMinute;
         }
 
+        public bool TickTock()
+        {
+            if (Minute + 1 > 59)
+            {
+                Minute = 0;                
+                if (Hour + 1 > 23)
+                {
+                    Hour = 0;
+                }
+                else
+                {
+                    Hour++;
+                }
+            }
+            else
+            {
+                Minute++;
+            }
+
+            // Checking if time matches alarm time.
+            if (Hour == AlarmHour && Minute == AlarmMinute)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+
     }
 }
