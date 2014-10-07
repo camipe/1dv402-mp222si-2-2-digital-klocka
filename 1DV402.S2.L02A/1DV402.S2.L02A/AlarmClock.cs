@@ -61,7 +61,15 @@ namespace _1DV402.S2.L02A
                 else {_minute = value;}                 
             }
         }
+
+        // Constructors
+        AlarmClock()
+            :this(0, 0)
+        {
+
+        }
         AlarmClock(int hour, int minute)
+            :this(0, 0, 0, 0)
         {
             
         }
