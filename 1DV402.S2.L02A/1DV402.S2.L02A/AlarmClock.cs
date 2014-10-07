@@ -63,12 +63,12 @@ namespace _1DV402.S2.L02A
         }
 
         // Constructors
-        AlarmClock()
+         public AlarmClock()
             :this(0, 0)
         {
 
         }
-        AlarmClock(int hour, int minute)
+        public AlarmClock(int hour, int minute)
             :this(0, 0, 0, 0)
         {
             
