@@ -18,8 +18,7 @@ namespace _1DV402.S2.L02A
              {              
 
                 Clock.TickTock();
-                Console.WriteLine("Hour: {0}", Clock.Hour);
-                Console.WriteLine("Minute: {0}", Clock.Minute);
+                Console.WriteLine(Clock.ToString());
              }
 
         }

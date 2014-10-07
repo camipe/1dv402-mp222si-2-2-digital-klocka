@@ -81,6 +81,7 @@ namespace _1DV402.S2.L02A
             AlarmMinute = alarmMinute;
         }
 
+        // Methods
         public bool TickTock()
         {
             if (Minute + 1 > 59)
@@ -111,6 +112,9 @@ namespace _1DV402.S2.L02A
             }
         }
 
-
+        public string ToString()
+        {
+            return string.Format("{0}:{1} ({2}:{3})", Hour, Minute.ToString("D2"), AlarmHour, AlarmMinute.ToString("D2"));
+        }
     }
 }
