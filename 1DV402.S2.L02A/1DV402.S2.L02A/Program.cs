@@ -15,7 +15,14 @@ namespace _1DV402.S2.L02A
             ViewTestHeader("Test 1.\nTest av standardkonstruktorn.");
             string time = clock.ToString();
             Console.WriteLine(time);
-            
+            Console.WriteLine();
+
+            // Test 2
+            clock = new AlarmClock(9, 42);
+            ViewTestHeader("Test 2.\nTest av standardkonstruktorn med två parametrar, (9, 42)");
+            time = clock.ToString();
+            Console.WriteLine(time);
+            Console.WriteLine();
         }
 
         private static void Run(AlarmClock ac, int minutes)

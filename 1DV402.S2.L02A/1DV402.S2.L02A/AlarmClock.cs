@@ -69,7 +69,7 @@ namespace _1DV402.S2.L02A
 
         }
         public AlarmClock(int hour, int minute)
-            :this(0, 0, 0, 0)
+            :this(hour, minute, 0, 0)
         {
             
         }
