@@ -10,17 +10,29 @@ namespace _1DV402.S2.L02A
     {
         static void Main(string[] args)
         {
-             AlarmClock Clock = new AlarmClock();
-             Console.WriteLine("Hour: {0}", Clock.Hour);
-             Console.WriteLine("Minute: {0}", Clock.Minute);
+            AlarmClock clock = new AlarmClock();
+           
+            // Test 1
+            ViewTestHeader("Test 1.\nTest av standardkonstruktorn.");
+            
+        }
 
-             for (int i = 0; i < 1500; i++)
-             {              
+        private static void Run(AlarmClock ac, int minutes)
+        {
+            for (int i = 0; i < minutes; i++)
+            {
+                ac.TickTock();
+            }
+        }
 
-                Clock.TickTock();
-                Console.WriteLine(Clock.ToString());
-             }
+        private static void ViewErrorMessage(string message)
+        {
+            Console.WriteLine(message);
+        }
 
+        private static void ViewTestHeader(string header)
+        {
+            Console.WriteLine(header);
         }
     }
 }
