@@ -34,16 +34,35 @@ namespace _1DV402.S2.L02A
             // Test 4
             clock.Hour = 23;
             clock.Minute = 58;
-            ViewTestHeader("Test 2.\nStäller ett befintligt AlarmClock-objekt till 23:58 och låter den gå 13 minuter.");
+            ViewTestHeader("Test 4.\nStäller ett befintligt AlarmClock-objekt till 23:58 och låter den gå 13 minuter.");
             Run(clock, 13);
+            Console.WriteLine();
+
+            // Test 5
+            clock.Hour = 6;
+            clock.Minute = 12;
+            clock.AlarmHour = 6;
+            clock.AlarmMinute = 15;
+            ViewTestHeader("Test 5.\nStäller befintligt AlarmClock-objekt till tiden 6:12 och alarmtiden till 6:15 och låter den gå 6 minuter");
+            Run(clock, 6);
+            Console.WriteLine();
+
+            // Test 6
+
         }
 
         private static void Run(AlarmClock ac, int minutes)
         {
             for (int i = 0; i < minutes; i++)
             {
-                ac.TickTock();
-                Console.WriteLine(ac.ToString());
+                if (ac.TickTock())
+                {
+                    Console.BackgroundColor = ConsoleColor.Blue;
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine(ac.ToString() + "\tBEEP! BEEP! BEEP! BEEP!");
+                    Console.ResetColor();
+                }
+                else {Console.WriteLine(ac.ToString());}
             }
         }
 
