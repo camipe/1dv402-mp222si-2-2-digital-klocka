@@ -23,6 +23,19 @@ namespace _1DV402.S2.L02A
             time = clock.ToString();
             Console.WriteLine(time);
             Console.WriteLine();
+
+            // Test 3
+            clock = new AlarmClock(13, 24, 7, 35);
+            ViewTestHeader("Test 3.\nTest av standardkonstruktorn med fyra parametrar, (13, 24, 7, 35)");
+            time = clock.ToString();
+            Console.WriteLine(time);
+            Console.WriteLine();
+
+            // Test 4
+            clock.Hour = 23;
+            clock.Minute = 58;
+            ViewTestHeader("Test 2.\nStäller ett befintligt AlarmClock-objekt till 23:58 och låter den gå 13 minuter.");
+            Run(clock, 13);
         }
 
         private static void Run(AlarmClock ac, int minutes)
@@ -30,6 +43,7 @@ namespace _1DV402.S2.L02A
             for (int i = 0; i < minutes; i++)
             {
                 ac.TickTock();
+                Console.WriteLine(ac.ToString());
             }
         }
 
