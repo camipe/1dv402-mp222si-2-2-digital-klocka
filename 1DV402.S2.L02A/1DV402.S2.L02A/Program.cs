@@ -9,11 +9,12 @@ namespace _1DV402.S2.L02A
     class Program
     {
         static void Main(string[] args)
-        {
-            AlarmClock clock = new AlarmClock();
-           
+        {                      
             // Test 1
+            AlarmClock clock = new AlarmClock();
             ViewTestHeader("Test 1.\nTest av standardkonstruktorn.");
+            string time = clock.ToString();
+            Console.WriteLine(time);
             
         }
 
